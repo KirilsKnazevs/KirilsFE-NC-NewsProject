@@ -25,13 +25,33 @@ function ArticlesList() {
       <TopicList />
       <section>
         <h2>ArticlesList:</h2>
-        {articles.map(({ article_id, title }) => {
-          return (
-            <div to={`/articles`} key={article_id}>
-              <ArticleCard article_id={article_id} title={title} />
-            </div>
-          );
-        })}
+        {articles.map(
+          ({
+            article_id,
+            title,
+            topic,
+            author,
+            body,
+            created_at,
+            votes,
+            comment_count,
+          }) => {
+            return (
+              <div to={`/articles`} key={article_id}>
+                <ArticleCard
+                  article_id={article_id}
+                  title={title}
+                  topic={topic}
+                  author={author}
+                  body={body}
+                  created_at={created_at}
+                  votes={votes}
+                  comment_count={comment_count}
+                />
+              </div>
+            );
+          }
+        )}
       </section>
     </>
   );
