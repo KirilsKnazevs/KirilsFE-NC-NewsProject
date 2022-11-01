@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import ArticleCard from "./ArticleCard";
+import TopicList from "./TopicList";
 
 function ArticlesList() {
   const [articles, setArticles] = useState([]);
@@ -21,16 +21,19 @@ function ArticlesList() {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <section>
-      <h2>ArticlesList:</h2>
-      {articles.map(({ article_id, title }) => {
-        return (
-          <Link to={`/article`} key={article_id}>
-            <ArticleCard article_id={article_id} title={title} />
-          </Link>
-        );
-      })}
-    </section>
+    <>
+      <TopicList />
+      <section>
+        <h2>ArticlesList:</h2>
+        {articles.map(({ article_id, title }) => {
+          return (
+            <div to={`/articles`} key={article_id}>
+              <ArticleCard article_id={article_id} title={title} />
+            </div>
+          );
+        })}
+      </section>
+    </>
   );
 }
 
