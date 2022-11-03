@@ -24,11 +24,11 @@ function CommentsList() {
   if (isLoading) return <p>Loading...</p>;
 
   return (
-    <section>
+    <ul>
       <h3>CommentsList:</h3>
       {comments.map(({ comment_id, body, author, votes, created_at }) => {
         return (
-          <div key={comment_id}>
+          <li key={comment_id}>
             <CommentCard
               comment_id={comment_id}
               body={body}
@@ -36,10 +36,10 @@ function CommentsList() {
               votes={votes}
               created_at={created_at}
             />
-          </div>
+          </li>
         );
       })}
-    </section>
+    </ul>
   );
 }
 

@@ -2,14 +2,12 @@ import React from "react";
 
 function CommentCard({ comment_id, body, author, votes, created_at }) {
   return (
-    <div>
-      <ul>
-        <li>Author: {author}</li>
-        <li>Date: {created_at}</li>
-        <li>Comment: {body}</li>
-        <li>Votes: {votes}</li>
-      </ul>
-    </div>
+    <>
+      <p>Author: {author}</p>
+      <p>Date: {created_at}</p>
+      <p>Comment: {body}</p>
+      <p>Votes: {votes}</p>
+    </>
   );
 }
 
