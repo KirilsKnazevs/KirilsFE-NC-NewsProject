@@ -2,7 +2,6 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Votes from "./Votes";
-import Comments from "./CommentsList";
 
 function Article() {
   const [article, setArticle] = useState([]);
@@ -33,7 +32,6 @@ function Article() {
         <p>Comment count: {article.comment_count} </p>
       </div>
       <Votes votes={article.votes} article_id={article.article_id} />
-      <Comments />
     </>
   );
 }
