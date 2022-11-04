@@ -6,10 +6,21 @@ function TopicList() {
     <div>
       TopicList:
       <nav>
-        <Link to="/articles">All Topics</Link>
-        <Link to="/topics/coding">Coding</Link>
-        <Link to="/topics/cooking">Cooking</Link>
-        <Link to="/topics/football">Football</Link>
+        <Link className="ArticleLink" to="/articles">
+          All Topics
+        </Link>
+        <br />
+        <Link className="ArticleLink" to="/topics/coding">
+          Coding
+        </Link>
+        <br />
+        <Link className="ArticleLink" to="/topics/cooking">
+          Cooking
+        </Link>
+        <br />
+        <Link className="ArticleLink" to="/topics/football">
+          Football
+        </Link>
       </nav>
     </div>
   );

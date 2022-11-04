@@ -36,10 +36,10 @@ function Votes({ votes, article_id }) {
   return (
     <div>
       <p>Total Votes: {votes + upVote + downVote}</p>
-      <button disabled={upVote !== 0} onClick={handleUpVotes}>
+      <button disabled={upVote === 1} onClick={handleUpVotes}>
         Upvote ⬆
       </button>
-      <button disabled={downVote !== 0} onClick={handleDownVotes}>
+      <button disabled={downVote === -1} onClick={handleDownVotes}>
         Downvote ⬇
       </button>
     </div>

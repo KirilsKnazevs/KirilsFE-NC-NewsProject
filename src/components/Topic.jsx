@@ -30,7 +30,7 @@ function Topic() {
         return (
           <div key={article_id}>
             <ul>
-              <Link to={`/articles/${article_id}`}>
+              <Link className="ArticleLink" to={`/articles/${article_id}`}>
                 <li>{title}</li>
               </Link>
             </ul>
