@@ -7,8 +7,6 @@ function UserList() {
   const [isLoading, setIsLoading] = useState(true);
   const { user, setUser } = useContext(UserContext);
 
-  console.log(user);
-
   useEffect(() => {
     setIsLoading(true);
     fetch(`https://kirils-ncnews.herokuapp.com/api/users`)
