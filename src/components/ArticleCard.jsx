@@ -5,7 +5,7 @@ function ArticleCard({ title, article_id }) {
   return (
     <div>
       <ul>
-        <Link to={`/articles/${article_id}`}>
+        <Link className="ArticleLink" to={`/articles/${article_id}`}>
           <li>Title: {title}</li>
         </Link>
       </ul>

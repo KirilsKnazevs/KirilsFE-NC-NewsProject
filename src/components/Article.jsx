@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Votes from "./Votes";
 import CommentsList from "./CommentsList";
+import NewComment from "./NewComment";
 
 function Article() {
   const [article, setArticle] = useState([]);
@@ -29,10 +30,11 @@ function Article() {
         <p>Author: {article.author}</p>
         <p>Topic: {article.topic}</p>
         <p>Description: {article.body}</p>
-        <p>Created at: {article.created_at}</p>
+        <p>Created at: {article.created_at.slice(0, 10)}</p>
         <p>Comment count: {article.comment_count} </p>
       </div>
       <Votes votes={article.votes} article_id={article.article_id} />
+      <NewComment article_id={article.article_id} />
       <CommentsList />
     </>
   );
